@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+   <title>Aarogya Hospital</title>
+   <meta name="viewport" content="width=device-width, initial-scale=1">
+   <style>
+      body {
+         margin: 0px;
+         max-width: 100%;
+         font-family: Arial, Helvetica, sans-serif;
+      }
+   </style>
+   <link rel="stylesheet" href="slider.css" type="text/css">
+   <link rel="stylesheet" href="header-footer.css" type="text/css">
+   <link rel="stylesheet" href="speclialities.css" type="text/css">
+   <link rel="stylesheet" href="doctor.css" type="text/css">
+   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+   <script src="main.js"></script>
+   <script src="appointment.js"></script>
+</head>
+
+<body onload="bodyOnLoad()">
+
+   <header id="header">
+      <div class="head-left">
+         <img id="logo" src=".\images\logo.png" alt="hospital logo">
+      </div>
+      <div class="head-right">
+         <div class="appt" id="apt">
+            <p id="aptBtn" onselectstart="return false">
+               <a href="#" onclick="saveAllDoc()" style="color:white; text-decoration: none;">Book Appointment</a>
+            </p>
+         </div>
+         <div class="nav-bar" id="navbar">
+            <a href="main.html">Home</a>
+            <a href="aboutUs.html">About Us</a>
+            <a href="#spcl">Our Specialities</a>
+            <a href="#doc">Our Doctors</a>
+            <a href="#foot">Contact Us</a>
+         </div>
+      </div>
+   </header>
+   <script>
+      window.onscroll = function() {
+         scrollBody()
+      };
+   </script>
+
+   <div class="slider">
+      <div class="slidershow-container">
+         <img src=".\images\slider1.jpg" class="mySlides fade">
+         <img src=".\images\slider2.jpg" class="mySlides fade">
+         <img src=".\images\slider3.jpg" class="mySlides fade">
+         <img src=".\images\slider4.jpg" class="mySlides fade">
+         <img src=".\images\slider5.jpg" class="mySlides fade">
+
+         <div id="spcl" style="position: absolute; margin-top: -75px;"></div>
+      </div>
+
+      <script>
+         var slideIndex = 0;
+         showSlides();
+      </script>
+   </div>
+   <div class="spcl-list">
+      <div id="spcl-det">
+         <hr class="line">
+         <h1>Our Medical Specialities</h1>
+         <hr class="line">
+      </div>
+      <p id="spcl-para">Aarogya Hospital offers all the medical super specialities under a single roof.</p>
+
+      <div class="flex-container">
+         <div class="type">
+            <span><img src="./images/Anaesthesiology.png"  alt="services-image"></span>
+            <br/><strong>Anaesthesiology</strong>
+         </div>
+
+         <div class="type">
+            <span><img src="./images/cancer.png"  alt="services-image"></span>
+            <br/><strong>Cancer</strong>
+         </div>
+
+         <div class="type">
+            <span><img src="./images/cardiology.png"  alt="services-image"></span>
+            <br/><strong>Cardiology</strong>
+         </div>
+
+         <div class="type">
+            <span><img src="./images/Dental.png" class="img-responsive" alt="services-image"></span>
+            <br/><strong>Dental</strong>
+         </div>
+
+         <div class="type">
+            <span><img src="./images/Dietetics.png" class="img-responsive" alt="services-image"></span>
+            <br/><strong>Dietetics</strong>
+         </div>
+
+         <div class="type">
+            <span><img src="./images/ent.png" class="img-responsive" alt="services-image"></span>
+            <br/><strong>Ear Nose Throat (ENT)</strong>
+         </div>
+
+         <div class="type">
+            <span><img src="./images/general-surgery.png" class="img-responsive" alt="services-image"></span>
+            <br/><strong>General Surgery</strong>
+         </div>
+
+         <div class="type">
+            <span><img src="./images/Medicine.png" class="img-responsive" alt="services-image"></span>
+            <br/><strong>Medicine</strong>
+         </div>
+
+         <div class="type">
+            <span><img src="./images/Neurosurgery.png" class="img-responsive" alt="services-image"></span>
+            <br/><strong>Neurosurgery</strong>
+         </div>
+
+         <div class="type">
+            <span><img src="./images/gynaecology.png" class="img-responsive" alt="services-image"></span>
+            <br/><strong>Obstetrics & Gynaecology</strong>
+         </div>
+
+         <div class="type">
+            <span><img src="./images/Ophthalmology.png" class="img-responsive" alt="services-image"></span>
+            <br/><strong>Ophthalmology</strong>
+         </div>
+
+         <div class="type">
+            <span><img src="./images/Joint-Replacement.png" class="img-responsive" alt="services-image"></span>
+            <br/><strong>Ortho & Joint Replacement</strong>
+         </div>
+
+         <div class="type">
+            <span><img src="./images/Blood-Bank.png" class="img-responsive" alt="services-image"></span>
+            <br/><strong>Pathology & Blood Bank</strong>
+         </div>
+
+         <div class="type">
+            <span><img src="./images/Pediatrics.png" class="img-responsive" alt="services-image"></span>
+            <br/><strong>Pediatrics</strong>
+         </div>
+
+         <div class="type">
+            <span><img src="./images/Physiotherapy.png" class="img-responsive" alt="services-image"></span>
+            <br/><strong>Physiotherapy</strong>
+         </div>
+      </div>
+      <div id="doc" style="height:0px;"></div>
+   </div>
+
+   <div class="doc-team">
+      <div class="container">
+         <center>
+            <div id="exp">
+               <hr class="line">
+               <h1>Meet Our Expertise</h1>
+               <hr class="line">
+            </div>
+         </center>
+         <div class="my">
+            <div class="inMySlides">
+               <center>
+                  <img class="doc" src=".\images\doc1.png" alt="doc1">
+                  <div class="top" onclick="docOnClick(0)">
+                     <p>Book an <br> Appointment</p>
+                  </div>
+                  <div class="doc-det">
+                     <h3 class="kya">DR. RAVI BHATIA</h3>
+                     <p>HOD & Senior Consultant-Center</br>for ENT & Cochlear Implant</p>
+                  </div>
+               </center>
+            </div>
+            <div class="inMySlides">
+               <center>
+                  <img class="doc" src=".\images\doc2.png" alt="doc2">
+                  <div class="top" onclick="docOnClick(1)">
+                     <p>Book an <br> Appointment</p>
+                  </div>
+                  <div class="doc-det">
+                     <h3 class="kya">DR. SEEMA MANUJA</h3>
+                     <p>HOD & Senior Consultant-Center</br>for Women Health</p>
+                  </div>
+               </center>
+            </div>
+            <div class="inMySlides">
+               <center>
+                  <img class="doc" src=".\images\doc3.png" alt="doc3">
+                  <div class="top" onclick="docOnClick(2)">
+                     <p>Book an <br> Appointment</p>
+                  </div>
+                  <div class="doc-det">
+                     <h3 class="kya">DR. SUMANT GUPTA</h3>
+                     <p>HOD & Senior Consultant-Center</br>for Joint Replacement</p>
+                  </div>
+               </center>
+            </div>
+            <div class="inMySlides">
+               <center>
+                  <img class="doc" src=".\images\doc4.png" alt="doc4">
+                  <div class="top" onclick="docOnClick(3)">
+                     <p>Book an <br> Appointment</p>
+                  </div>
+                  <div class="doc-det">
+                     <h3 class="kya">DR. RITU JHA</h3>
+                     <p>HOD & Senior Consultant-Center</br>for ENT & Cochlear Implant</p>
+                  </div>
+               </center>
+            </div>
+            <div class="inMySlides">
+               <center>
+                  <img class="doc" src=".\images\doc5.png" alt="doc5">
+                  <div class="top" onclick="docOnClick(4)">
+                     <p>Book an <br> Appointment</p>
+                  </div>
+                  <div class="doc-det">
+                     <h3 class="kya">DR. DINESH PENDHARKAR</h3>
+                     <p>Director-Aarogya Cancer Institute</br>of Medical Sciences</p>
+                  </div>
+               </center>
+            </div>
+            <div class="inMySlides">
+               <center>
+                  <img class="doc" src=".\images\doc6.png" alt="doc6">
+                  <div class="top" onclick="docOnClick(5)">
+                     <p>Book an <br> Appointment</p>
+                  </div>
+                  <div class="doc-det">
+                     <h3 class="kya">DR. MANISHA MENDIRATTA</h3>
+                     <p>Senior Consultant-Respiratory</br>Disease & Sleep Disorder</p>
+                  </div>
+               </center>
+            </div>
+            <div class="inMySlides">
+               <center>
+                  <img class="doc" src=".\images\doc8.png" alt="doc7">
+                  <div class="top" onclick="docOnClick(6)">
+                     <p>Book an <br> Appointment</p>
+                  </div>
+                  <div class="doc-det">
+                     <h3 class="kya">DR. BHASKAR NANDI</h3>
+                     <p>Director & HOD-Center for</br>Liver & Digestive Sciences</p>
+                  </div>
+               </center>
+            </div>
+            <div class="inMySlides">
+               <center>
+                  <img class="doc" src=".\images\doc7.png" alt="doc8">
+                  <div class="top" onclick="docOnClick(7)">
+                     <p>Book an <br> Appointment</p>
+                  </div>
+                  <div class="doc-det">
+                     <h3 class="kya">DR. BALKISHAN GUPTA</h3>
+                     <p>Senior Consultant-Center</br>for Minimal Access Surgery</p>
+                  </div>
+               </center>
+            </div>
+         </div>
+         <a class="pre" id="pre" onclick="plus(-1)">&#10094;</a>
+         <a class="nex" id="nex" onclick="plus(1)">&#10095;</a>
+
+      </div>
+
+      <script>
+         var sDoc = 0;
+         var eDoc = 3;
+         showDoc(sDoc, eDoc);
+      </script>
+
+   </div>
+   <footer>
+      <div class="top-foot">
+         <div class="foot-left">
+            <h2><i><u>Creators</u></i></h2>
+            <h4>(0473) Gargee Dua</h4>
+            <h4>(0465) Vansh Ahuja</h4>
+            <h4>(0466) Nishriti Kukkar</h4>
+            <h4>(0457) Parth Nagpal</h4>
+         </div>
+         <div class="foot-center" id="foot">
+            <h2><u><i>Contact Us</u></i>
+            </h2>
+            <a href="#address" id="address">
+               <span id="add" class="fa fa-map-marker">&nbsp;&nbsp;NH-8, Mumbai-Jaipur</br>Highway - 400012<br>Mumbai, BHARAT </span>
+            </a>
+            </br>
+            <a href="#phone" id="phone">
+               <span id="ph" class="fa fa-phone">&nbsp;&nbsp;1800 XXXX 1234</span>
+            </a>
+         </div>
+         <div class="foot-right">
+            <h2><u><i>Write To Us</u></i>
+            </h2>
+            <a href="#mail" id="mail">
+               <span id="ma" class="fa fa-envelope">&nbsp;&nbsp;aarogyahospital@gmail.com</span>
+            </a>
+            </br>
+            </br>
+            <a href="#facebook" id="facebook">
+               <span id="fa" class="fa fa-facebook"></span>
+            </a>
+            <a href="#twitter" id="twitter">
+               <span id="fa" class="fa fa-twitter"></span>
+            </a>
+            <a href="#linkedin" id="linkedin">
+               <span id="fa" class="fa fa-linkedin"></span>
+            </a>
+            <a href="#youtube" id="youtube">
+               <span id="fa" class="fa fa-youtube"></span>
+            </a>
+         </div>
+      </div>
+      <div class="btm-foot">
+         <center>
+            <p id="copyRight">Copyright &copy; Aarogya Hospital 2019</p>
+         </center>
+      </div>
+   </footer>
+
+</body>
+
+</html>

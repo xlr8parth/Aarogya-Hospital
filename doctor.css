@@ -1,0 +1,105 @@
+* {
+   box-sizing: border-box;
+}
+
+.container {
+   max-width: 100%;
+   position: relative;
+}
+
+#exp {
+   display: flex;
+   flex-wrap: wrap;
+   margin-left: 30%;
+   margin-right: 30%;
+}
+
+.line {
+   transform: rotate(90deg);
+   border: 2px solid red;
+}
+
+#exp>h1 {
+   color: rgb(45, 83, 45);
+   font-weight: lighter;
+}
+
+.my {
+   display: flex;
+   width: 95%;
+   margin-left: 2.5%;
+   flex-wrap: wrap;
+}
+
+.inMySlides {
+   border: 2px solid rgb(64, 143, 212);
+   width: 23%;
+   margin: 1%;
+   border-radius: 8px;
+}
+
+.doc {
+   height: 300px;
+   padding-top: 5px;
+   z-index: -1;
+}
+
+.top {
+   position: absolute;
+   height: 300px;
+   top: 6rem;
+   width: 21.6%;
+   padding-top: 7.5rem;
+   font-size: 2rem;
+   cursor: pointer;
+}
+
+.top:hover {
+   background-color: gray;
+   opacity: 0.6;
+}
+
+.top>p {
+   visibility: hidden;
+   color: white;
+}
+
+.top:hover>p {
+   visibility: visible;
+}
+
+.kya {
+   color: #9fa700;
+}
+
+.doc-det {
+   background-color: #f7f3f2;
+   padding-top: 3%;
+   padding-bottom: 0.5px;
+   margin: 0px 7px 7px 7px;
+   border-radius: 5px;
+}
+
+.pre,
+.nex {
+   cursor: pointer;
+   position: absolute;
+   background-color: rgba(142, 192, 240, 0.8);
+   top: 50%;
+   color: rgb(64, 143, 212);
+   padding: 16px;
+   font-weight: bold;
+   font-size: 18px;
+   transition: 0.6s ease;
+   border-radius: 0 3px 3px 0px;
+}
+
+.nex {
+   right: 0;
+   border-radius: 3px 0 03px;
+}
+
+.pre:hover,
+.nex:hover {
+   background-color: rgba(0, 0, 0, 0.8);
+}

@@ -1,0 +1,162 @@
+header {
+   height: 150px;
+   background-color: white;
+   position: fixed;
+   width: 100%;
+   z-index: 1;
+}
+
+.head-left {
+   float: left;
+}
+
+#logo {
+   height: 125px;
+   margin: 10px 0px 0px 20px;
+   filter: saturate(6) hue-rotate(180deg);
+}
+
+.head-right {
+   float: right;
+   padding-top: 0px;
+}
+
+.appt {
+   width: 250px;
+   text-align: center;
+   margin-left: 750px;
+}
+
+.appt>p {
+   padding: 15px 10px;
+   background-color: rgb(34, 101, 160);
+   border-radius: 50px;
+   font-size: 24px;
+   margin-bottom: 16px;
+   color: white;
+   cursor: pointer;
+   box-shadow: 5px 5px 5px grey;
+}
+
+.appt>p:active {
+   position: relative;
+   top: 5px;
+   left: 5px;
+   box-shadow: none;
+}
+
+.appt>p:hover {
+   background-image: linear-gradient(to bottom, rgb(34, 101, 160), rgb(41, 125, 199), rgb(135, 200, 253));
+}
+
+.nav-bar {
+   display: inline-block;
+   background-color: rgb(64, 143, 212);
+   border-top-left-radius: 400px;
+   height: 53px;
+   width: 1050px;
+   text-align: right;
+   padding-top: 15px;
+   padding-right: 150px;
+}
+
+.nav-bar>a {
+   text-decoration: none;
+   color: white;
+   padding-left: 25px;
+   font-size: 24px;
+}
+
+
+/* ---------------------------------------------------------------- */
+
+footer {
+   background-color: #222222;
+   height: 300px;
+}
+
+.top-foot {
+   display: flex;
+   height: 250px;
+}
+
+.foot-left {
+   color: rgba(255, 255, 255, 1);
+   padding: 15px 0px 0px 20px;
+   width: 33%;
+}
+
+.foot-left>h4 {
+   color: rgba(255, 255, 255, 0.8);
+}
+
+#ph,
+#add,
+#ma {
+   margin-bottom: 20px;
+   text-decoration: none;
+   color: rgba(255, 255, 255, 0.8);
+   line-height: 30px;
+   outline: none;
+   border: none;
+   font-size: 18px;
+}
+
+.foot-center {
+   float: center;
+   color: rgba(255, 255, 255, 1);
+   padding-top: 15px;
+   text-align: center;
+   width: 33%;
+}
+
+#fa {
+   height: 30px;
+   width: 30px;
+   text-align: center;
+}
+
+#facebook,
+#twitter,
+#linkedin,
+#youtube {
+   font-size: 18px;
+   padding: 7px 5px;
+   border-radius: 50%;
+   color: white;
+   text-decoration: none;
+   margin-right: 10px;
+   outline: none;
+   border: none;
+}
+
+#facebook {
+   background-color: #3b5998;
+}
+
+#twitter {
+   background-color: #00acee;
+}
+
+#linkedin {
+   background-color: #0e76a8;
+}
+
+#youtube {
+   background-color: #f70000;
+}
+
+.foot-right {
+   color: rgba(255, 255, 255, 1);
+   padding: 15px 20px 0px 0px;
+   text-align: right;
+   width: 33%;
+}
+
+.btm-foot {
+   height: 50px;
+   background-color: #1d1d1d;
+   color: rgba(255, 255, 255, 0.5);
+   padding-top: 1px;
+   padding-bottom: 3px;
+}
