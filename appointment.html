@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+   <title>Book Appointment</title>
+   <meta name="viewport" content="width=device-width, initial-scale=1">
+   <style>
+      body {
+         margin: 0px;
+         max-width: 100%;
+         font-family: Arial, Helvetica, sans-serif;
+      }
+      
+      #no:hover {
+         cursor: not-allowed;
+      }
+   </style>
+   <link rel="stylesheet" href="header-footer.css" type="text/css">
+   <link rel="stylesheet" href="doctor.css" type="text/css">
+   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+   <link rel="stylesheet" href="appointment.css">
+   <script src="main.js"></script>
+   <script src="appointment.js"></script>
+</head>
+
+<body onload="apptOnLoad()">
+   <header id="header">
+      <div class="head-left">
+         <img id="logo" src=".\images\logo.png" alt="hospital logo">
+      </div>
+      <div class="head-right">
+         <div class="appt" id="apt">
+            <p id="aptBtn" onselectstart="return false">
+               <a href="#" id="no" style="color:white; text-decoration: none;">Book Appointment</a>
+            </p>
+         </div>
+         <div class="nav-bar" id="navbar">
+            <a href="main.html">Home</a>
+            <a href="aboutUs.html">About Us</a>
+            <a href="main.html#spcl">Our Specialities</a>
+            <a href="main.html#doc">Our Doctors</a>
+            <a href="#foot">Contact Us</a>
+         </div>
+      </div>
+   </header>
+   <script>
+      window.onscroll = function() {
+         scrollBody()
+      };
+   </script>
+   <div>
+      <div>
+         <div class="heading">
+         </div>
+         <div id="huh">
+            <h1>BOOK APPOINTMENT</h1>
+         </div>
+      </div>
+      <center>
+         <div>
+            <div>
+               <form target="" method="post">
+                  <table cellspacing="10" class="dashed">
+                     <tr>
+                        <td>Hospital Name *</td>
+                        <td width="50px"><select name="hospital name" disabled/>
+                           <option value="hospital">AAROGYA HOSPITAL</option>
+                        </td>
+                     </tr>
+                     <tr>
+                        <td>Specialty *</td>
+                        <td><select name="speciality" id="spclt" onchange="setDocList()" />
+                           <option value="select speciality">--Select Speciality--</option>
+                        </td>
+                     </tr>
+                     <tr>
+                        <td>Doctor *</td>
+                        <td><select name="doctor" id="doctor" />
+                           <option value="select speciality">--Select Doctor--</option>
+                        </td>
+                     </tr>
+
+                  </table>
+
+                  <table cellspacing="13" class="left">
+                     <tr>
+                        <td>Name*</td>
+                        <td>Select Gender</td>
+                     </tr>
+                     <tr>
+                        <td><input type="text" id="field" placeholder="--Patient Name--" required></td>
+                        <td><select name="gender" />
+                           <option value="select gender">--Select Gender--</option>
+                           <option value="male">Male</option>
+                           <option value="female">Female</option>
+                           <option value="other">Other</option>
+                        </td>
+                     </tr>
+                     <tr>
+                        <td>Email *</td>
+                        <td>Phone *</td>
+                     </tr>
+                     <tr>
+                        <td><input id="field" type="email" name="email" required></td>
+                        <td><input type="tel" id="tel" name="phone" placeholder="--XXXXXXXXXX--" pattern="[0-9]{10}" required></td>
+                     </tr>
+                     <tr>
+                        <td colspan="2">Query</td>
+                     </tr>
+                     <tr>
+                        <td colspan="2"><input class="query" type="text" name="query"></td>
+                     </tr>
+                     <tr>
+                        <td>
+                           <center>
+                              <button type="back" onclick="window.history.back()">BACK</button>
+
+                           </center>
+                        </td>
+                        <td>
+                           <center>
+                              <button type="submit">SUBMIT</button>
+                           </center>
+                        </td>
+                     </tr>
+                  </table>
+               </form>
+            </div>
+         </div>
+      </center>
+   </div>
+
+   <br><br>
+   <footer>
+      <div class="top-foot">
+         <div class="foot-left">
+            <h2><i><u>Creators</u></i></h2>
+            <h4>(0473) Gargee Dua</h4>
+            <h4>(0465) Vansh Ahuja</h4>
+            <h4>(0466) Nishriti Kukkar</h4>
+            <h4>(0457) Parth Nagpal</h4>
+         </div>
+         <div class="foot-center" id="foot">
+            <h2><u><i>Contact Us</u></i>
+            </h2>
+            <a href="#address" id="address">
+               <span id="add" class="fa fa-map-marker">&nbsp;&nbsp;NH-8, Mumbai-Jaipur</br>Highway - 400012<br>Mumbai, BHARAT </span>
+            </a>
+            </br>
+            <a href="#phone" id="phone">
+               <span id="ph" class="fa fa-phone">&nbsp;&nbsp;1800 XXXX 1234</span>
+            </a>
+         </div>
+         <div class="foot-right">
+            <h2><u><i>Write To Us</u></i>
+            </h2>
+            <a href="#mail" id="mail">
+               <span id="ma" class="fa fa-envelope">&nbsp;&nbsp;aarogyahospital@gmail.com</span>
+            </a>
+            </br>
+            </br>
+            <a href="#facebook" id="facebook">
+               <span id="fa" class="fa fa-facebook"></span>
+            </a>
+            <a href="#twitter" id="twitter">
+               <span id="fa" class="fa fa-twitter"></span>
+            </a>
+            <a href="#linkedin" id="linkedin">
+               <span id="fa" class="fa fa-linkedin"></span>
+            </a>
+            <a href="#youtube" id="youtube">
+               <span id="fa" class="fa fa-youtube"></span>
+            </a>
+         </div>
+      </div>
+      <div class="btm-foot">
+         <center>
+            <p id="copyRight">Copyright &copy; Aarogya Hospital 2019</p>
+         </center>
+      </div>
+   </footer>
+</body>
+
+</html>
